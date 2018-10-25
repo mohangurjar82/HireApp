@@ -18,6 +18,6 @@ class PreRegistrationController < ApplicationController
   private
 
   def registration_params
-    params["data"].permit(:email, :phone)
+    params['data'].permit(:email, :phone)
   end
 end
