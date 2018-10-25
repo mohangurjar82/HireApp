@@ -9,13 +9,13 @@ class OauthController < ApplicationController
       sign_in(@user)
       redirect_to root_path
     rescue => e
-      flash[:alert] = "There was an error while trying to authenticate your account."
+      flash[:alert] = 'There was an error while trying to authenticate your account.'
       redirect_to root_path
     end
   end
 
   def failure
-    flash[:alert] = "There was an error while trying to authenticate your account."
+    flash[:alert] = 'There was an error while trying to authenticate your account.'
     redirect_to root_path
   end
 
