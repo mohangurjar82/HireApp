@@ -5,7 +5,7 @@ class PreRegistrationController < ApplicationController
 	  @pre_registration = current_user.pre_registration
 	end
 
-	def create
+  def create
     registration_record = PreRegistration.create(registration_params)
     registration_record.user_id = current_user.id
     if registration_record.save
