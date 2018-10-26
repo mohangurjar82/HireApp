@@ -1,9 +1,9 @@
 class PreRegistrationController < ApplicationController
-	before_action :authenticate_user!
+  before_action :authenticate_user!
 
-	def new
-	  @pre_registration = current_user.pre_registration
-	end
+  def new
+    @pre_registration = current_user.pre_registration
+  end
 
   def create
     registration_record = PreRegistration.create(registration_params)
